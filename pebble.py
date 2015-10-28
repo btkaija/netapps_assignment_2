@@ -1,12 +1,14 @@
 #the message client 'pebble.py'
-import sys
+import sys, time
 args = sys.argv
 print str(args)
 
+client_authot = "Ben Kaija"
+client_age = 22
 
 def push_mesg(subject, text):
     print 'pushing message --> '+subject+': '+text
-
+    new_id = time.strftime("%Y%m%d%H%M%S", time.localtime())
 
 if len(args) < 3:
     print 'no action requested'
